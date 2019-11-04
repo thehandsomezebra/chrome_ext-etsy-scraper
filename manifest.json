@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Etsy Image Scraper",
+  "version": "1.0",
+  "description": "Scrape your personal etsy shop pages and place all image urls into a txt file within just a few clicks!",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["tabs"],
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
